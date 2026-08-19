@@ -57,6 +57,7 @@ body {
 }
 
 /* текстові стилі, щоб не повторюватись постійно */
+
 .text-body {
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -278,13 +279,35 @@ body {
   gap: 1.5rem;
 }
 
+.controls > :nth-child(3) {
+  margin-left: -1rem;
+}
+
 button {
   width: 3rem;
   height: 3rem;
   background-color: var(--color-more-muted);
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
 }
 
 button:hover {
   cursor: pointer;
   background-color: var(--color-text-muted);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+@supports (corner-shape: squircle) {
+  button {
+    border-radius: 1.5rem; /* більший радіус — тільки там, де squircle підтримується */
+    corner-shape: squircle;
+  }
 }
