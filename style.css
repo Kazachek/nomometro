@@ -208,6 +208,32 @@ body {
 /* серединка застосунку - сайдбар */
 .sidebar {
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 0.125rem;
+  align-items: center;
+}
+
+.marker {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.marker__thumb {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-more-muted);
+}
+
+.marker__thumb--accented {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--color-text);
 }
 
 /* серединка застосунку - число бітів */
@@ -219,18 +245,18 @@ body {
   gap: 2rem;
 }
 
-.bpm {
+.big-number__value {
   text-align: right;
   gap: 0.5rem;
   display: flex;
   flex-direction: column;
 }
 
-.value-name {
+.big-number__unit  {
   padding-right: 0.25rem;
 }
 
-.slider {
+.tempo-control {
   color: var(--color-text-muted);
 }
 
