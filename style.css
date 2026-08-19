@@ -183,7 +183,7 @@ body {
 }
 
 .theme-toggle__input:focus-visible ~ .theme-toggle__track {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
@@ -203,4 +203,40 @@ body {
 
 .theme-toggle__input:checked ~ .theme-toggle__labels .theme-toggle__label--night {
   color: var(--color-text);
+}
+
+/* серединка застосунку - сайдбар */
+.sidebar {
+  grid-area: sidebar;
+}
+
+/* серединка застосунку - число бітів */
+.big-number {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bpm {
+  text-align: right;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.value-name {
+  padding-right: 0.25rem;
+}
+
+.slider {
+  color: var(--color-text-muted);
+}
+
+.app-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
