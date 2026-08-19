@@ -293,6 +293,7 @@ button {
   border-radius: 1rem;
   display: grid;
   place-items: center;
+  padding: 0;
 }
 
 button:hover {
@@ -305,9 +306,41 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+button:active {
+  transform: scale(0.95);
+}
+
 @supports (corner-shape: squircle) {
   button {
     border-radius: 1.5rem; /* більший радіус — тільки там, де squircle підтримується */
     corner-shape: squircle;
   }
+}
+
+.play-button__icon {
+  grid-area: 1 / 1; /* обидві іконки в одну й ту саму клітинку — накладаються одна на одну */
+}
+
+.play-button__icon--pause {
+  display: none;
+}
+
+.play-button[aria-pressed="true"] .play-button__icon--play {
+  display: none;
+}
+
+.play-button[aria-pressed="true"] .play-button__icon--pause {
+  display: block;
+}
+
+/* футер застосунку - інформація */
+.info-button {
+  padding: 0.5rem;
+}
+
+.info-button button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  corner-shape: round;
 }
