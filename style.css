@@ -265,8 +265,8 @@ body {
 /* футер застосунку */
 .app-footer {
   grid-area: footer;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
@@ -278,6 +278,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  justify-self: start;
 }
 
 @supports not (appearance: base-select) {
@@ -419,6 +420,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  justify-self: center;
 }
 
 .controls > :nth-child(3) {
@@ -478,6 +480,7 @@ button:active {
 /* футер застосунку - інформація */
 .info-button {
   padding: 0.5rem;
+  justify-self: end;
 }
 
 .info-button button {
