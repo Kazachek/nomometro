@@ -317,12 +317,12 @@ body {
     border: none;
     padding: 0;
     background: none;
+    cursor: pointer;
   }
 
   .time-sig__options button {
     background-color: var(--color-text);
     color: var(--color-background);
-    cursor: pointer;
     height: 2rem;
     width: auto;
     border-radius: 999px;
@@ -335,22 +335,57 @@ body {
   }
 
   select.time-sig__options:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
-  border-radius: 999px;
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
+    border-radius: 999px;
   }
 
   .time-sig__options button svg {
-  color: var(--color-surface);
+    color: var(--color-surface);
   }
 
   .time-sig__options::picker(select) {
-    /* стилі самої випадної панелі: фон, border-radius, тінь тощо */
+    appearance: base-select;
+    background-color: var(--white);
+    corner-shape: squircle;
+    border-radius: 2rem;
+    border: none;
+    padding: 0.5rem;
+    width: 9rem;
+    margin-bottom: 0.5rem;
   }
 
   .time-sig__options--inside {
-    /* стилі кожного пункту списку: відступи, hover, чекмарк */
+    background-color: none;
+    corner-shape: squircle;
+    border-radius: 0.75rem;
+    height: 2rem;
+    padding: 0 0.5rem 0 0.75rem;
+    min-height: 0;
+    display: flex;
+    align-items: center;
   }
+
+  .time-sig__options--inside:hover {
+    background-color: var(--color-more-muted);
+  }
+
+  .time-sig__options--inside:checked {
+    background-color: var(--color-more-muted);
+  }
+
+  .time-sig__options--inside:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: -2px;
+  }
+
+  .time-sig__options--inside::checkmark {
+    content: url("img/Checkmark-icon.svg");
+    order: 1;
+    margin-left: auto;
+    align-self: center;
+  }
+
 }
 
 /* футер застосунку - акцентний біт */
