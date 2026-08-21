@@ -46,7 +46,7 @@ body {
   background-color: var(--color-background);
   font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -68,7 +68,7 @@ body {
 .text-body-smaller {
   font-size: 1rem;
   line-height: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: var(--tracking-tight);
 }
 
@@ -78,6 +78,7 @@ body {
   font-weight: 600;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+  font-style: normal;
 }
 
 .bpm-number {
@@ -94,6 +95,7 @@ body {
 }
 
 /* стилі загальних блоків */
+
 .page {
   flex: 1;
   display: grid;
@@ -105,13 +107,62 @@ body {
     "footer footer footer";
 }
 
+/* стилі інформаційної панелі */
+
 .info-panel {
-  width: 0;
+  width: 30%;
   overflow: hidden;
   transition: width 0.3s ease;
+  background-color: var(--white);
+  corner-shape: squircle;
+  border-radius: 2rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
+.info-panel__greeting {
+  gap: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-panel__paragraph {
+  gap: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+address {
+  color: var(--color-text-muted);
+}
+
+.info-panel__coffee {
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-panel__coffee button {
+  width: auto;
+  align-self: flex-start;
+  height: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  background: none;
+  padding: 0 0.25rem 0 0.5rem;
+  margin-top: auto;
+}
+
+.info-panel__coffee button:hover {
+  background-color: var(--color-more-muted);
 }
 
 /* стилі хедера */
+
 .app-header {
   grid-area: header;
   display: flex;
@@ -121,6 +172,7 @@ body {
 }
 
 /* стилі хедера - логотип */
+
 .logo {
   display: flex;
   align-items: flex-start;
